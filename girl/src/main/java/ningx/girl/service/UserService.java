@@ -13,10 +13,10 @@ public class UserService {
 	private UserMapper userMapper;
 	
 	/**
-	 * 根据邮箱校验密码
+	 * 根据邮箱验证密码
 	 * @param email 
 	 * @param password
-	 * @return true:校验成功   false:校验失败
+	 * @return true:验证通过  false:验证失败
 	 */
 	public boolean verifyPwdByEmail(String email,String password){
 		User user = userMapper.selectByEmail(email);

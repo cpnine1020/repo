@@ -15,8 +15,8 @@
             <property name="dialect" value="ibator.dialect.OracleDialect"/>
         </plugin>
     </plugins>-->
-    <!-- - - - - - - -映射文件路径- - - - - - -->
-    <mappers>
+    <!-- - - - - - - -映射文件路径,已经在spring 配置文件中配置- - - - - - -->
+    <!-- <mappers>
         <mapper resource="ningx/girl/model/sql/UserMapper.xml"/>
-    </mappers>
+    </mappers> -->
 </configuration>

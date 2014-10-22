@@ -1,13 +1,12 @@
 package ningx.girl.service;
 
-import ningx.girl.service.UserService;
-
+import org.hamcrest.Matchers;
+import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
-
 @RunWith(SpringJUnit4ClassRunner.class) 
 @ContextConfiguration(locations = {"classpath:spring-mvc.xml"})
 public class UserServiceTest {
@@ -16,6 +15,8 @@ public class UserServiceTest {
 	
 	@Test
 	public void verifyPwdByEmail(){
-		System.out.println(userService.verifyPwdByEmail("ningxiao1020@foxmail.com", "222222"));
+		Assert.assertThat(userService.verifyPwdByEmail("test@foxmail.com", "test"),Matchers.is(true));
 	}
+	
+	
 }

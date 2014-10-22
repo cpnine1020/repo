@@ -1,11 +1,11 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>com.ningx</groupId>
-	<artifactId>girllove</artifactId>
+	<groupId>ningx</groupId>
+	<artifactId>girl</artifactId>
 	<packaging>war</packaging>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>girllove Maven Webapp</name>
+	<name>girl Maven Webapp</name>
 	<url>http://maven.apache.org</url>
 	<properties>
 		<java-version>1.7</java-version>
@@ -24,6 +24,7 @@
 			<groupId>javax.servlet</groupId>
 			<artifactId>servlet-api</artifactId>
 			<version>2.5</version>
+			<scope>provided</scope>
 		</dependency>
 
 		<!-- spring mvc -->
@@ -66,6 +67,7 @@
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-test</artifactId>
 			<version>${org.springframework-version}</version>
+			<scope>test</scope>
 		</dependency>
 
 
@@ -94,6 +96,15 @@
 			<artifactId>log4j</artifactId>
 			<version>1.2.17</version>
 		</dependency>
+		
+		<!-- junit 测试时用于matcher -->
+		<dependency>
+			<groupId>org.hamcrest</groupId>
+			<artifactId>hamcrest-all</artifactId>
+			<version>1.1</version>
+			<scope>test</scope>
+		</dependency>
+
 
 
 
@@ -224,6 +235,6 @@
 	</dependencies>
 
 	<build>
-		<finalName>girllove</finalName>
+		<finalName>girl</finalName>
 	</build>
 </project>
