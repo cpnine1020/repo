@@ -16,6 +16,6 @@ public class UserServiceTest {
 	
 	@Test
 	public void verifyPwdByEmail(){
-		System.out.println(userService.verifyPwdByEmail("ningxiao1020@foxmail.com", "112233"));
+		System.out.println(userService.verifyPwdByEmail("ningxiao1020@foxmail.com", "222222"));
 	}
 }
