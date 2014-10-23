@@ -48,7 +48,7 @@
 	<!-- <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource"
 		destroy-method="close">
 		<property name="driverClassName" value="oracle.jdbc.driver.OracleDriver" />
-		<property name="url" value="jdbc:oracle:thin:@10.23.118.224:1521:db224" />
+		<property name="url" value="jdbc:oracle:thin:@00.00.000.000:1521:db224" />
 		<property name="username" value="user01" />
 		<property name="password" value="user01" />
 		<property name="maxActive" value="5" />
