@@ -16,27 +16,24 @@
 			http://www.springframework.org/schema/context 
 			http://www.springframework.org/schema/context/spring-context-3.0.xsd">
 
-
-	<!-- 使Spring支持自动检测组件 -->
-	<context:component-scan base-package="ningx.girl" />
-	<!-- 默认的注解映射的支持 -->
-	<mvc:annotation-driven />
-	<!-- 对静态资源文件的访问 -->
-	<mvc:default-servlet-handler />
-	<!-- jsp页面解析器，当Controller返回XXX字符串时，先通过拦截器，然后该类就会在/WEB-INF/views/目录下，查找XXX.jsp文件 -->
-	<bean
-		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
-		<property name="prefix" value="/WEB-INF/jsp/" />
-		<property name="suffix" value=".jsp" />
+	<!-- 资源文件配置 -->
+	<bean id="propertiesBean"
+		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="locations">
+			<list>
+				<value>classpath:*.properties</value>
+			</list>
+		</property>
 	</bean>
+	
 
 	<!-- jdbc数据源 -->
 	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource"
 		destroy-method="close">
-		<property name="driverClassName" value="com.mysql.jdbc.Driver" />
-		<property name="url" value="jdbc:mysql://localhost:3306/girl" />
-		<property name="username" value="root" />
-		<property name="password" value="root" />
+		<property name="driverClassName" value="${datasource.driverClassName}" />
+		<property name="url" value="${datasource.url}" />
+		<property name="username" value="${datasource.userName}" />
+		<property name="password" value="${datasource.password}" />
 		<property name="maxActive" value="5" />
 		<property name="maxIdle" value="3" />
 		<property name="maxWait" value="1000" />
@@ -59,13 +56,24 @@
 		<property name="removeAbandonedTimeout" value="60" />
 		<property name="validationQuery" value="select * from dual" />
 	</bean> -->
-
+	
 	<!-- (事务管理)transaction manager, use JtaTransactionManager for global tx -->
 	<bean id="transactionManager"
 		class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
 		<property name="dataSource" ref="dataSource" />
 	</bean>
-	
+	<!-- 使Spring支持自动检测组件 -->
+	<context:component-scan base-package="ningx.girl" />
+	<!-- 默认的注解映射的支持 -->
+	<mvc:annotation-driven />
+	<!-- 对静态资源文件的访问 -->
+	<mvc:default-servlet-handler />
+	<!-- jsp页面解析器，当Controller返回XXX字符串时，先通过拦截器，然后该类就会在/WEB-INF/views/目录下，查找XXX.jsp文件 -->
+	<bean
+		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="prefix" value="/WEB-INF/jsp/" />
+		<property name="suffix" value=".jsp" />
+	</bean>
 	<!-- 可通过注解控制事务 -->  
     <tx:annotation-driven />
 
@@ -87,7 +95,4 @@
         <property name="sqlSessionFactory" ref="sqlSessionFactory"/>
         <property name="mapperInterface" value="ningx.girl.dao.UserMapper"/>
     </bean> -->
-
-
-
 </beans>
