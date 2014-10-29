@@ -17,6 +17,4 @@ public class UserServiceTest {
 	public void verifyPwdByEmail(){
 		Assert.assertThat(userService.verifyPwdByEmail("test@foxmail.com", "test"),Matchers.is(true));
 	}
-	
-	
 }
