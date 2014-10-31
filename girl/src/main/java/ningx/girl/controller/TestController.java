@@ -19,5 +19,6 @@ public class TestController {
 		mv.addObject("m-sg", "hello world");
 		mv.setViewName("test");
 		return mv;
+		
 	}
 }
