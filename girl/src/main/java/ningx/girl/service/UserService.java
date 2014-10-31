@@ -5,6 +5,7 @@ import ningx.girl.model.User;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 @Service
 public class UserService {
@@ -18,6 +19,7 @@ public class UserService {
 	 * @param password
 	 * @return true:验证通过  false:验证失败
 	 */
+	@Transactional(readOnly = true)
 	public boolean verifyPwdByEmail(String email,String password){
 		User user = userMapper.selectByEmail(email);
 		if (user!=null&&user.getPassword().equals(password)){
