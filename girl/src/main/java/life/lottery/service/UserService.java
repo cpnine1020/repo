@@ -1,7 +1,7 @@
-package ningx.girl.service;
+package life.lottery.service;
 
-import ningx.girl.dao.UserMapper;
-import ningx.girl.model.User;
+import life.lottery.dao.UserMapper;
+import life.lottery.model.User;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

@@ -1,4 +1,4 @@
-package ningx.girl.controller;
+package life.lottery.controller;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;

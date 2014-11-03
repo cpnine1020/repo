@@ -1,6 +1,6 @@
-package ningx.girl.dao;
+package life.lottery.dao;
 
-import ningx.girl.model.User;
+import life.lottery.model.User;
 
 public interface UserMapper {
 	

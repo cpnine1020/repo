@@ -1,4 +1,4 @@
-package ningx.girl.model;
+package life.lottery.model;
 
 import java.io.Serializable;
 

@@ -1,4 +1,6 @@
-package ningx.girl.service;
+package life.lottery.service;
+
+import life.lottery.service.UserService;
 
 import org.hamcrest.Matchers;
 import org.junit.Assert;
