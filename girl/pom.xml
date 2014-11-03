@@ -4,7 +4,7 @@
 	<artifactId>life</artifactId>
 	<packaging>war</packaging>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>girl Maven Webapp</name>
+	<name>life Maven Webapp</name>
 	<url>http://maven.apache.org</url>
 	<properties>
 		<java-version>1.7</java-version>
@@ -236,7 +236,7 @@
 	</dependencies>
 
 	<build>
-		<finalName>girl</finalName>
+		<finalName>life</finalName>
 	</build>
 	<groupId>ningx</groupId>
 </project>
